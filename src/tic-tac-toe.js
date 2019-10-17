@@ -1,4 +1,5 @@
 class TicTacToe {
+    
     constructor() {
         this.player1 = {
             symbol: 'x',
@@ -14,7 +15,18 @@ class TicTacToe {
         this.winMark = null;
     }
 
+    getCurrentPlayerSymbol() {
+        let currentPlayerSymbol;
+        if (this.player1.turn) {
+            currentPlayerSymbol = this.player1.symbol;
+        } else {
+            currentPlayerSymbol = this.player2.symbol;
+        };
+        return currentPlayerSymbol;
+    }
+
     
+
 }
 
 module.exports = TicTacToe;
