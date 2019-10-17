@@ -24,9 +24,16 @@ class TicTacToe {
         };
         return currentPlayerSymbol;
     }
-
     
+    nextTurn(rowIndex, columnIndex) {
+        if (this.turns[rowIndex][columnIndex] === null) {
+            this.turns[rowIndex][columnIndex] = this.getCurrentPlayerSymbol();
+            this.player1.turn = !this.player1.turn; // switching player1 turn
+            this.player2.turn = !this.player2.turn; // switching player2 turn
+        }
+    }
 
+   
 }
 
 module.exports = TicTacToe;
