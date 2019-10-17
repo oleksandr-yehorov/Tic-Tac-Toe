@@ -9,7 +9,9 @@ class TicTacToe {
             symbol: 'o',
             turn: false
         };
-    
+        
+        this.turns = [[null, null, null], [null, null, null], [null, null, null]]
+        this.winMark = null;
     }
 
     
