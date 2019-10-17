@@ -33,6 +33,14 @@ class TicTacToe {
         }
     }
 
+    isFinished() {
+        if (this.getWinner() || this.isDraw()) {
+            return true;
+        } else {
+        return false
+        };
+    }
+
    
 }
 
