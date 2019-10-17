@@ -26,6 +26,7 @@ class TicTacToe {
         return currentPlayerSymbol;
     }
     
+    // Switching next turn
     nextTurn(rowIndex, columnIndex) {
         if (this.turns[rowIndex][columnIndex] === null) {
             this.turns[rowIndex][columnIndex] = this.getCurrentPlayerSymbol();
@@ -34,6 +35,7 @@ class TicTacToe {
         }
     }
 
+    // Check finishing game
     isFinished() {
         if (this.getWinner() || this.isDraw()) {
             return true;
@@ -42,6 +44,7 @@ class TicTacToe {
         };
     }
 
+    // Winner combinations
     getWinner() {
         if ((this.turns[0][0] === this.turns[0][1]) && (this.turns[0][0] === this.turns[0][2]) && (this.turns[0][0] !== null)) {
             this.winMark = this.turns[0][0];
@@ -64,6 +67,7 @@ class TicTacToe {
         return this.winMark;
     }
 
+    // Checking for more turns
     noMoreTurns() {
         for (let i = 0; i < 3; i++) {
             for (let j = 0; j < 3; j++) {
@@ -75,6 +79,7 @@ class TicTacToe {
         return true;
     }
 
+    // Checking draw
     isDraw() {
         if (this.noMoreTurns() && !this.getWinner()) {
             return true;
@@ -83,11 +88,11 @@ class TicTacToe {
         };
     }
 
+    // Field value for this turn
     getFieldValue(rowIndex, colIndex) {
         return this.turns[rowIndex][colIndex];
     }
-    
-    
+
 }
 
 module.exports = TicTacToe;
