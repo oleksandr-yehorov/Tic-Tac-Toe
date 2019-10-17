@@ -82,6 +82,10 @@ class TicTacToe {
             return false
         };
     }
+
+    getFieldValue(rowIndex, colIndex) {
+        return this.turns[rowIndex][colIndex];
+    }
     
     
 }
