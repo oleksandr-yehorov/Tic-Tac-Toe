@@ -74,6 +74,14 @@ class TicTacToe {
         }
         return true;
     }
+
+    isDraw() {
+        if (this.noMoreTurns() && !this.getWinner()) {
+            return true;
+        } else {
+            return false
+        };
+    }
     
     
 }
